@@ -1,0 +1,65 @@
+{
+    "id": "fa3b16f0-c365-4d62-a025-da231f2e7a39",
+    "name": "setclickonceversion",
+    "friendlyName": "Set ClickOnce Version",
+    "description": "Update a project file&#39;s (.csproj or .vbproj file) ClickOnce version, and optionally set the Minimum Required Version to the lastest version.",
+    "helpMarkDown": "[More Information](https://url.to/yourmarkdown)",
+    "category": "Utility",
+    "visibility": ["Build"],
+    "author": "",
+    "version": {
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 0
+    },
+    "demands": [],
+    "groups": [{
+            "name": "version",
+            "displayName": "Version",
+            "isExpanded": true
+        },
+        {
+            "name": "minimumVersion",
+            "displayName": "Minimum Required Version"
+        }
+    ],
+    "inputs": [{
+            "name": "path",
+            "type": "filePath",
+            "label": "Path to .csproj or .vbproj",
+            "required": true,
+            "groupName": "version"
+        },
+        {
+            "name": "version",
+            "type": "string",
+            "label": "Version",
+            "required": true,
+            "helpMarkDown": "The Version to update the ClickOnce version number to. This version must be of the format Major.Minor.Build or Major.Minor.Build.Revision",
+            "defaultValue": "1.0.0.$(Build.BuildID)",
+            "groupName": "version"
+        },
+        {
+            "name": "minimum",
+            "type": "boolean",
+            "label": "Update Minimum Required Version",
+            "helpMarkDown": "MinimumRequiredVersion will be updated to match the new Version. Setting the MinimumRequiredVersion property forces the ClickOnce application to update automatically without prompting the user.",
+            "groupName": "minimumVersion"
+        },
+        {
+            "name": "minimumversion",
+            "type": "string",
+            "label": "Minimum Required Version",
+            "helpMarkDown": "The Minimum Required Version to update the ClickOnce version number to. If blank, this will be the same as the Version numberThis version must be of the format Major.Minor.Build or Major.Minor.Build.Revision",
+            "groupName": "minimumVersion",
+            "visibleRule": "minimum = true"
+        }
+    ],
+    "instanceNameFormat": "setclickonceversion",
+    "execution": {
+        "Node": {
+            "target": "setclickonceversion.js"
+        }
+    }
+
+}

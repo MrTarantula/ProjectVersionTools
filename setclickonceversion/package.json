@@ -1,0 +1,17 @@
+{
+  "name": "task",
+  "version": "1.0.0",
+  "description": "package.json for task lib",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "vsts-task-lib": "^2.0.5",
+    "xmldom": "^0.1.27"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.7",
+    "@types/q": "1.0.2",
+    "@types/xmldom": "^0.1.29"
+  }
+}
