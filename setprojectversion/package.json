@@ -1,5 +1,5 @@
 {
-  "name": "task",
+  "name": "setprojectversion",
   "version": "1.0.0",
   "description": "package.json for task lib",
   "scripts": {

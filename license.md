@@ -1,6 +1,6 @@
-ClickOnce Versioning
+Project Version Tools
 
-Copyright (c) //TODO:Add owners name
+Copyright (c) Ryan Tauriainen
 
 All rights reserved.
 

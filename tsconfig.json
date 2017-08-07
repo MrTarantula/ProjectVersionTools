@@ -6,6 +6,7 @@
     },
     "exclude": [
         "node_modules",
-        "setclickonceversion/node_modules"
+        "setprojectversion/node_modules",
+        "versionintovariables/node_modules"
     ]
 }

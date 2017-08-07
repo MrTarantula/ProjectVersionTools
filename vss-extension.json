@@ -1,74 +1,93 @@
 {
   "manifestVersion": 1,
-  "id": "clickonceversion",
-  "version": "0.1.5",
-  "name": "ClickOnce Versioning",
+  "id": "projectversiontools",
+  "version": "1.0.0",
+  "name": "Project Version Tools",
   "scopes": [],
-  "description": "Update a project file&#39;s (.csproj or .vbproj file) ClickOnce version, and optionally set the Minimum Required Version to the lastest version.",
+  "description": "Build tasks for reading and setting project versions.",
   "publisher": "mrtarantula",
-  "galleryFlags": [
-    "Preview"
-  ],
+  "public": true,
   "icons": {
     "default": "static/images/logo.png"
   },
-  "targets": [
-    {
-      "id": "Microsoft.VisualStudio.Services"
-    }
-  ],
+  "targets": [{
+    "id": "Microsoft.VisualStudio.Services"
+  }],
   "demands": [
     "api-version/3.0"
   ],
   "tags": [
-    "Sample"
+    "ClickOnce",
+    "Version",
+    "Application Version",
+    "Minimum Required Version",
+    "vbproj",
+    "csproj",
+    "Variables"
   ],
   "categories": [
     "Build and release"
   ],
-  "screenshots": [
+  "screenshots": [{
+      "path": "static/images/setversion.png"
+    },
+    {
+      "path": "static/images/variables.png"
+    }
   ],
   "content": {
     "license": {
       "path": "license.md"
     },
     "details": {
-      "path": "overview.md"
+      "path": "readme.md"
     }
   },
   "links": {
-    "getstarted": {
-      "uri": "https://bit.ly"
-    },
     "support": {
-      "uri": "https://bit.ly"
+      "uri": "https://github.com/MrTarantula/ProjectVersionTools/issues"
     },
-    "issues": {
-      "uri": "https://bit.ly"
+    "repository": {
+      "uri": "https://github.com/MrTarantula/ProjectVersionTools"
     }
   },
   "repository": {
     "type": "git",
-    "uri": "https://bit.ly"
+    "uri": "https://github.com/MrTarantula/ProjectVersionTools"
   },
   "branding": {
-    "color": "rgb(220, 235, 252)",
+    "color": "rgb(255, 255, 255)",
     "theme": "light"
   },
-  "files": [
+  "files": [{
+      "path": "static/images",
+      "addressable": true
+    },
     {
-      "path": "setclickonceversion"
+      "path": "setprojectversion"
+    },
+    {
+      "path": "versionintovariables"
     }
   ],
-  "contributions": [
-    {
-      "id": "setclickonceversion",
+  "contributions": [{
+      "id": "setprojectversion",
       "targets": [
         "ms.vss-distributed-task.tasks"
       ],
       "type": "ms.vss-distributed-task.task",
       "properties": {
-        "name": "Set ClickOnce Version"
+        "name": "setprojectversion"
+      }
+    },
+    {
+      "id": "versionintovariables",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "type": "ms.vss-distributed-task.task",
+      "properties": {
+        "name": "versionintovariables"
       }
     }
   ]
