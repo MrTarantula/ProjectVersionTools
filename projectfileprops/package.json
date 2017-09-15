@@ -1,5 +1,5 @@
 {
-  "name": "setprojectversion",
+  "name": "projectfileprops",
   "version": "1.0.0",
   "description": "package.json for task lib",
   "scripts": {

@@ -7,12 +7,12 @@
   },
   "devDependencies": {
     "@types/node": "^8.0.7",
+    "@types/q": "1.0.2",
+    "@types/xmldom": "^0.1.29",
     "tfx-cli": "^0.4.5",
     "typescript": "2.3.4"
   },
   "name": "projectversiontools",
   "private": true,
-  "version": "0.0.1",
-  "dependencies": {
-  }
+  "version": "0.0.2"
 }

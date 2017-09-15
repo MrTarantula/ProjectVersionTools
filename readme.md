@@ -43,3 +43,7 @@ Version.Full (same as Version.MajorMinorBuildRevision)
 An optional prefix can be set so that the task can be used on multiple projects. If the prefix is set to `Fabrikam` then the Application Version variable can be added to another task as `$(Fabrikam.Version.Full)`.
 
 ![Set Project Version](static/images/variables.png)
+
+### Modify Project File Properties
+
+Pick your vbproj or csproj file, then pick the property you want to modify, and set its value.
