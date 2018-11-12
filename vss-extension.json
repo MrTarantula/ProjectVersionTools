@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
   "id": "projectversiontools",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "name": "Project Version Tools",
   "scopes": [],
   "description": "Build tasks for reading and setting project versions.",
