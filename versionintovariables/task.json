@@ -12,6 +12,13 @@
         "Minor": 0,
         "Patch": 0
     },
+    "groups": [
+        {
+            "name": "advanced",
+            "displayName": "Advanced",
+            "isExpanded": false
+        }
+    ],
     "demands": [],
     "inputs": [{
             "name": "path",
@@ -24,6 +31,22 @@
             "type": "string",
             "label": "Variables Prefix",
             "helpMarkDown": "Prefix to append to variables, if desired."
+        },
+        {
+            "name": "versionTag",
+            "type": "string",
+            "groupName": "advanced",
+            "defaultValue": "ApplicationVersion",
+            "label": "Version Tag Name",
+            "helpMarkDown": "Name of the tag that holds the version information in your project file."
+        },
+        {
+            "name": "revisionTag",
+            "type": "string",
+            "groupName": "advanced",
+            "defaultValue": "ApplicationRevision",
+            "label": "Revision Tag Name",
+            "helpMarkDown": "Name of the tag that holds the revison information in your project file."
         }
     ],
     "instanceNameFormat": "Get Application Version as variables from $(path)",
