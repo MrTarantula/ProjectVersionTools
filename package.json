@@ -1,18 +1,18 @@
 {
   "scripts": {
-    "package": "npm run clean  && npm run compile  && tfx extension create  --rev-version",
-    "gallery-publish": "tfx extension publish --rev-version",
+    "package": "npm run clean  && npm run compile  && tfx extension create",
+    "gallery-publish": "tfx extension publish",
     "clean": "rimraf ./*.vsix",
     "compile": "tsc -p ."
   },
   "devDependencies": {
-    "@types/node": "^8.0.7",
-    "@types/q": "1.0.2",
+    "@types/node": "^8.10.37",
+    "@types/q": "1.5.1",
     "@types/xmldom": "^0.1.29",
-    "tfx-cli": "^0.4.5",
-    "typescript": "2.3.4"
+    "tfx-cli": "^0.6.3",
+    "typescript": "^2.9.2"
   },
   "name": "projectversiontools",
   "private": true,
-  "version": "0.0.2"
+  "version": "1.2.0"
 }

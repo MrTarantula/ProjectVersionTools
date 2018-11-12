@@ -17,6 +17,8 @@ const workingDir = tl.getVariable('System.DefaultWorkingDirectory');
 const projectFilePath = tl.getPathInput('path', true, true);
 let prefix = tl.getInput('prefix');
 prefix = prefix ? prefix + '.' : '';
+let versionTagName = tl.getInput('versionTag');
+let revisionTagName = tl.getInput('revisionTag');
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
@@ -24,8 +26,8 @@ function run() {
             const projFiles = tl.findMatch(workingDir, projectFilePath);
             projFiles.forEach((file) => {
                 const doc = new Parser.DOMParser().parseFromString(fs.readFileSync(file, { encoding: 'utf8' }));
-                const versionElem = doc.getElementsByTagName('ApplicationVersion').item(0);
-                const revisionElem = doc.getElementsByTagName('ApplicationRevision').item(0);
+                const versionElem = doc.getElementsByTagName(versionTagName).item(0);
+                const revisionElem = doc.getElementsByTagName(revisionTagName).item(0);
                 const version = versionElem.textContent.split('.');
                 tl.setVariable(`${prefix}Version.Major`, version[0]);
                 tl.setVariable(`${prefix}Version.Minor`, version[1]);
